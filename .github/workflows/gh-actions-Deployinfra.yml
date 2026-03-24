@@ -28,7 +28,7 @@ jobs:
       name: Create Resource Group
       with:
         inlineScript: |
-          az group create --name ${{ secrets.DEVRESOURCEGROUP }} --location ${{ secrets.LOCATION }} --tags LabInstance=${{ secrets.LABINSTANCEID }}
+          az group create --name "rg-juiceshop-dev-lod"  --location "westcentralus" --tags LabInstance=${{ secrets.LABINSTANCEID }}
 
           az group create --name ${{ secrets.PRODRESOURCEGROUP }} --location ${{ secrets.LOCATION }} --tags LabInstance=${{ secrets.LABINSTANCEID }}
         azcliversion: latest
